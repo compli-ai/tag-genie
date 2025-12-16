@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "tag-genie"
+version = "0.1.0"
+description = "A simple CLI tool for zero-shot text classification."
+authors = ["Your Name <you@example.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+typer = "^0.9.0"
+rich = "^13.0"
+transformers = "^4.11.3"
+torch = "^1.10.0"
+compli-ai = "^0.2.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.5"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

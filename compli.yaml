@@ -1,0 +1,36 @@
+# Metadata about the project.
+project:
+  name: tag-genie
+  version: 0.1.0
+  author: My Team <email@example.com>
+
+# Policy declarations required for EU AI Act compliance.
+policy:
+  # Intended Purpose (EU AI Act, Annex IV): A clear, specific description of the system's intended use.
+  intended_purpose: DESCRIBE_INTENDED_PURPOSE_HERE
+  # Risk Category (EU AI Act, Title III): The assessed risk level. Options: prohibited, high_risk, limited_risk, minimal_risk
+  risk_category: minimal_risk
+
+# The technical components of the AI system, auto-detected from the codebase.
+system:
+  models:
+  - facebook/bart-large-mnli
+  dependencies:
+  - rich
+  - transformers
+  - typer
+
+# Information about the data used by the system.
+data:
+  description: 'Placeholder: Describe the data used for training, testing, and validation.'
+  has_pii: false
+
+policy:
+  human_in_the_loop:
+    enabled: true
+    thresholds:
+      auto_approve: 0.85
+      flag_for_review: 0.50
+    enforcement: "Strict"
+    description: "All predictions below 50% confidence must be reviewed by a human operator."
+
